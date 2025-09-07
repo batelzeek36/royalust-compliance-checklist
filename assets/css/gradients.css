@@ -1,0 +1,478 @@
+/**
+ * Gradients Module - Background Gradients and Visual Effects
+ * Royalust Compliance Dashboard
+ * 
+ * Elegant gradient system matching Royalust brand aesthetic
+ * Deep cosmic backgrounds with gold/bronze accents and violet highlights
+ */
+
+/* ===== PRIMARY BACKGROUND GRADIENTS ===== */
+/* Main application background - cosmic depth */
+.gradient-cosmic-main {
+  background: linear-gradient(
+    135deg,
+    var(--midnight-blue) 0%,
+    var(--deep-navy) 25%,
+    var(--royal-navy) 50%,
+    var(--cosmic-void) 100%
+  );
+}
+
+/* Alternative cosmic background with more depth */
+.gradient-cosmic-deep {
+  background: linear-gradient(
+    180deg,
+    var(--cosmic-void) 0%,
+    var(--deep-navy) 30%,
+    var(--royal-navy) 60%,
+    var(--space-cadet) 100%
+  );
+}
+
+/* Radial cosmic background for overlays */
+.gradient-cosmic-radial {
+  background: radial-gradient(
+    ellipse at center,
+    var(--royal-navy) 0%,
+    var(--deep-navy) 40%,
+    var(--cosmic-void) 100%
+  );
+}
+
+/* ===== ROYALUST BRAND GRADIENTS ===== */
+/* Primary gold gradient for headings and important elements */
+.gradient-gold-primary {
+  background: linear-gradient(
+    135deg,
+    var(--royalust-gold) 0%,
+    var(--bronze-light) 50%,
+    var(--royalust-gold-light) 100%
+  );
+}
+
+/* Metallic bronze gradient */
+.gradient-bronze-metallic {
+  background: linear-gradient(
+    135deg,
+    var(--bronze-dark) 0%,
+    var(--bronze-light) 30%,
+    var(--antique-brass) 60%,
+    var(--bronze-metallic) 100%
+  );
+}
+
+/* Champagne elegance gradient */
+.gradient-champagne-elegant {
+  background: linear-gradient(
+    135deg,
+    var(--champagne) 0%,
+    var(--champagne-light) 50%,
+    var(--old-gold) 100%
+  );
+}
+
+/* Warm gold shimmer */
+.gradient-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--royalust-gold) 0%,
+    var(--golden-rod) 25%,
+    var(--harvest-gold) 50%,
+    var(--royalust-gold-light) 75%,
+    var(--royalust-gold) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerFlow 3s ease-in-out infinite;
+}
+
+@keyframes shimmerFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===== VIOLET ACCENT GRADIENTS ===== */
+/* Primary violet gradient for interactive elements */
+.gradient-violet-primary {
+  background: linear-gradient(
+    135deg,
+    var(--deep-violet) 0%,
+    var(--mystic-violet) 50%,
+    var(--ethereal-purple) 100%
+  );
+}
+
+/* Mystical violet with transparency */
+.gradient-violet-mystical {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 27, 105, 0.8) 0%,
+    rgba(74, 20, 140, 0.6) 50%,
+    rgba(106, 27, 154, 0.4) 100%
+  );
+}
+
+/* Lavender mist gradient */
+.gradient-lavender-mist {
+  background: linear-gradient(
+    135deg,
+    var(--lavender-mist) 0%,
+    var(--ethereal-purple) 50%,
+    var(--amethyst) 100%
+  );
+}
+
+/* ===== GLASS MORPHISM GRADIENTS ===== */
+/* Primary glass effect with gold tint */
+.gradient-glass-gold {
+  background: linear-gradient(
+    135deg,
+    var(--glass-gold) 0%,
+    var(--glass-gold-medium) 50%,
+    var(--glass-gold-light) 100%
+  );
+  backdrop-filter: blur(var(--blur-lg));
+  border: 1px solid var(--glass-border);
+}
+
+/* Glass effect with violet tint */
+.gradient-glass-violet {
+  background: linear-gradient(
+    135deg,
+    var(--glass-violet) 0%,
+    var(--glass-violet-medium) 50%,
+    var(--glass-violet-light) 100%
+  );
+  backdrop-filter: blur(var(--blur-lg));
+  border: 1px solid var(--glass-border-light);
+}
+
+/* Pure glass effect */
+.gradient-glass-pure {
+  background: linear-gradient(
+    135deg,
+    var(--glass-white) 0%,
+    var(--glass-white-medium) 50%,
+    var(--glass-white-light) 100%
+  );
+  backdrop-filter: blur(var(--blur-xl));
+  border: 1px solid var(--glass-border-light);
+}
+
+/* ===== COMPONENT SPECIFIC GRADIENTS ===== */
+/* Header gradient with crystalline effect */
+.gradient-header {
+  background: linear-gradient(
+    135deg,
+    rgba(123, 31, 162, 0.2) 0%,
+    rgba(106, 27, 154, 0.15) 30%,
+    rgba(212, 175, 55, 0.1) 70%,
+    rgba(156, 39, 176, 0.1) 100%
+  );
+  backdrop-filter: blur(var(--blur-xl));
+  border: 1px solid var(--glass-border);
+}
+
+/* Card gradient with elegant depth */
+.gradient-card {
+  background: linear-gradient(
+    135deg,
+    rgba(106, 27, 154, 0.1) 0%,
+    rgba(123, 31, 162, 0.15) 30%,
+    rgba(212, 175, 55, 0.05) 70%,
+    rgba(74, 20, 140, 0.1) 100%
+  );
+  backdrop-filter: blur(var(--blur-md));
+  border: 1px solid var(--glass-border-light);
+}
+
+/* Button gradient - primary */
+.gradient-button-primary {
+  background: linear-gradient(
+    135deg,
+    var(--royalust-gold) 0%,
+    var(--bronze-light) 50%,
+    var(--royalust-gold-light) 100%
+  );
+}
+
+/* Button gradient - secondary */
+.gradient-button-secondary {
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    var(--glass-gold-light) 50%,
+    transparent 100%
+  );
+  border: 2px solid var(--glass-border);
+  backdrop-filter: blur(var(--blur-base));
+}
+
+/* Progress bar gradient */
+.gradient-progress {
+  background: linear-gradient(
+    90deg,
+    var(--royalust-gold) 0%,
+    var(--bronze-light) 30%,
+    var(--royalust-gold-light) 60%,
+    var(--golden-rod) 100%
+  );
+}
+
+/* ===== ANIMATED GRADIENTS ===== */
+/* Rotating border gradient */
+.gradient-border-rotating {
+  background: linear-gradient(
+    45deg,
+    var(--royalust-gold),
+    var(--ethereal-purple),
+    var(--bronze-light),
+    var(--mystic-violet),
+    var(--royalust-gold)
+  );
+  background-size: 400% 400%;
+  animation: rotateBorder 4s linear infinite;
+}
+
+@keyframes rotateBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Pulsing glow gradient */
+.gradient-glow-pulse {
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.3) 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    transparent 100%
+  );
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Floating particles background */
+.gradient-particles {
+  background-image: 
+    radial-gradient(2px 2px at 20% 30%, var(--champagne), transparent),
+    radial-gradient(2px 2px at 60% 70%, var(--royalust-gold), transparent),
+    radial-gradient(1px 1px at 50% 50%, var(--bronze-light), transparent),
+    radial-gradient(1px 1px at 80% 10%, var(--champagne), transparent);
+  background-size: 200% 200%;
+  animation: floatParticles 20s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes floatParticles {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(-100px, -100px) rotate(360deg); }
+}
+
+/* ===== OVERLAY GRADIENTS ===== */
+/* Cosmic overlay with violet accents */
+.gradient-overlay-cosmic {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(106, 27, 154, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(74, 20, 140, 0.2) 0%, transparent 50%);
+}
+
+/* Shimmer overlay effect */
+.gradient-overlay-shimmer {
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(212, 175, 55, 0.1) 35%,
+    rgba(247, 231, 206, 0.1) 40%,
+    transparent 45%
+  );
+  animation: shimmerDiagonal 3s linear infinite;
+}
+
+@keyframes shimmerDiagonal {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+/* ===== STATUS GRADIENTS ===== */
+/* Success gradient */
+.gradient-success {
+  background: linear-gradient(
+    135deg,
+    var(--success-green) 0%,
+    var(--success-light) 100%
+  );
+}
+
+/* Warning gradient */
+.gradient-warning {
+  background: linear-gradient(
+    135deg,
+    var(--warning-amber) 0%,
+    var(--warning-light) 100%
+  );
+}
+
+/* Error gradient */
+.gradient-error {
+  background: linear-gradient(
+    135deg,
+    var(--error-red) 0%,
+    var(--error-light) 100%
+  );
+}
+
+/* Info gradient */
+.gradient-info {
+  background: linear-gradient(
+    135deg,
+    var(--info-blue) 0%,
+    var(--info-light) 100%
+  );
+}
+
+/* ===== UTILITY CLASSES ===== */
+/* Background attachment utilities */
+.bg-fixed { background-attachment: fixed; }
+.bg-local { background-attachment: local; }
+.bg-scroll { background-attachment: scroll; }
+
+/* Background size utilities */
+.bg-auto { background-size: auto; }
+.bg-cover { background-size: cover; }
+.bg-contain { background-size: contain; }
+
+/* Background position utilities */
+.bg-center { background-position: center; }
+.bg-top { background-position: top; }
+.bg-bottom { background-position: bottom; }
+.bg-left { background-position: left; }
+.bg-right { background-position: right; }
+
+/* Background repeat utilities */
+.bg-repeat { background-repeat: repeat; }
+.bg-no-repeat { background-repeat: no-repeat; }
+.bg-repeat-x { background-repeat: repeat-x; }
+.bg-repeat-y { background-repeat: repeat-y; }
+
+/* ===== RESPONSIVE GRADIENTS ===== */
+@media (max-width: 768px) {
+  .gradient-particles {
+    background-size: 150% 150%;
+    animation-duration: 15s;
+  }
+  
+  .gradient-overlay-shimmer {
+    animation-duration: 2s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-gold-shimmer,
+  .gradient-border-rotating,
+  .gradient-glow-pulse,
+  .gradient-particles,
+  .gradient-overlay-shimmer {
+    animation: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .gradient-cosmic-main,
+  .gradient-cosmic-deep,
+  .gradient-cosmic-radial,
+  .gradient-glass-gold,
+  .gradient-glass-violet,
+  .gradient-glass-pure,
+  .gradient-header,
+  .gradient-card {
+    background: white !important;
+    backdrop-filter: none !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .gradient-gold-primary,
+  .gradient-bronze-metallic,
+  .gradient-button-primary {
+    background: #333 !important;
+    color: white !important;
+  }
+}/* 
+===== HEADER COMPONENT GRADIENTS ===== */
+/* Gradients specifically for header component styling */
+
+/* Header background gradient - crystalline glass effect */
+.gradient-header-bg {
+  background: linear-gradient(135deg, 
+    rgba(123, 31, 162, 0.2) 0%, 
+    rgba(156, 39, 176, 0.1) 100%);
+}
+
+/* ROYALUST text gradient - animated gold/bronze */
+.gradient-royalust-text {
+  background: linear-gradient(
+    90deg,
+    var(--royalust-gold) 0%,
+    var(--bronze-light) 25%,
+    var(--champagne) 50%,
+    var(--royalust-gold) 75%,
+    var(--bronze-light) 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* Progress ring track gradient */
+.gradient-progress-track {
+  background: linear-gradient(90deg, 
+    var(--glass-gold) 0%, 
+    var(--glass-violet) 100%);
+}
+
+/* Holographic progress fill gradient - animated */
+.gradient-holographic {
+  background: linear-gradient(90deg,
+    var(--royalust-gold) 0%,
+    var(--bronze-light) 33%,
+    var(--champagne) 66%,
+    var(--royalust-gold) 100%
+  );
+  background-size: 300% 100%;
+}
+
+/* Shimmer effect gradient for header overlay */
+.gradient-shimmer {
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(212, 175, 55, 0.1) 35%,
+    rgba(247, 231, 206, 0.1) 40%,
+    transparent 45%
+  );
+}
+
+/* Mobile menu button hover gradient */
+.gradient-mobile-menu-hover {
+  background: linear-gradient(135deg,
+    var(--glass-gold) 0%,
+    var(--glass-violet) 100%
+  );
+}
+
+/* CSS Custom Properties for Dynamic Gradients */
+:root {
+  --gradient-gold-primary: linear-gradient(135deg, var(--bronze-light), var(--royalust-gold));
+  --gradient-gold-secondary: linear-gradient(135deg, var(--royalust-gold), var(--champagne));
+  --gradient-header-shimmer: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 35%, rgba(247, 231, 206, 0.1) 40%, transparent 45%);
+  --gradient-progress-holographic: linear-gradient(90deg, var(--royalust-gold) 0%, var(--bronze-light) 33%, var(--champagne) 66%, var(--royalust-gold) 100%);
+}

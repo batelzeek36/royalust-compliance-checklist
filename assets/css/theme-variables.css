@@ -1,0 +1,308 @@
+/**
+ * Theme Variables Module - Color Palette and Design Tokens
+ * Royalust Compliance Dashboard
+ * 
+ * Based on Royalust brand aesthetic with elegant gold/bronze typography
+ * on deep navy/cosmic backgrounds with violet accents
+ */
+
+:root {
+  /* ===== PRIMARY BACKGROUND COLORS ===== */
+  /* Deep cosmic backgrounds matching reference image */
+  --cosmic-void: #0a0a1a;
+  --deep-navy: #1a1a2e;
+  --royal-navy: #16213e;
+  --midnight-blue: #0f1419;
+  --space-cadet: #1e1e3f;
+  --dark-slate: #2f2f4a;
+  
+  /* ===== ROYALUST BRAND COLORS ===== */
+  /* Gold/Bronze Typography - Primary Brand Colors */
+  --royalust-gold: #d4af37;
+  --royalust-gold-light: #f4d03f;
+  --royalust-gold-dark: #b7950b;
+  --bronze-light: #cd7f32;
+  --bronze-dark: #b8860b;
+  --bronze-metallic: #cd7f32;
+  --champagne: #f7e7ce;
+  --champagne-light: #faf0e6;
+  --antique-brass: #cd7f32;
+  --old-gold: #cfb53b;
+  --golden-rod: #daa520;
+  --harvest-gold: #da9100;
+  
+  /* ===== VIOLET ACCENT COLORS ===== */
+  /* Interactive elements and highlights */
+  --deep-violet: #2d1b69;
+  --mystic-violet: #4a148c;
+  --ethereal-purple: #6a1b9a;
+  --lavender-mist: #9575cd;
+  --royal-purple: #663399;
+  --amethyst: #9966cc;
+  --plum: #8e4585;
+  --orchid: #da70d6;
+  
+  /* ===== NEUTRAL COLORS ===== */
+  /* Text and subtle elements */
+  --text-primary: #ffffff;
+  --text-secondary: #e1bee7;
+  --text-muted: #ba68c8;
+  --text-disabled: #6c757d;
+  --text-inverse: #1a1a2e;
+  
+  /* ===== STATUS COLORS ===== */
+  /* Semantic colors for states and feedback */
+  --success-green: #4caf50;
+  --success-light: #81c784;
+  --success-dark: #388e3c;
+  --warning-amber: #ff9800;
+  --warning-light: #ffb74d;
+  --warning-dark: #f57c00;
+  --error-red: #f44336;
+  --error-light: #e57373;
+  --error-dark: #d32f2f;
+  --info-blue: #2196f3;
+  --info-light: #64b5f6;
+  --info-dark: #1976d2;
+  
+  /* ===== GLASS EFFECTS ===== */
+  /* Glassmorphism and transparency */
+  --glass-white: rgba(255, 255, 255, 0.03);
+  --glass-white-light: rgba(255, 255, 255, 0.05);
+  --glass-white-medium: rgba(255, 255, 255, 0.08);
+  --glass-white-strong: rgba(255, 255, 255, 0.12);
+  --glass-gold: rgba(212, 175, 55, 0.1);
+  --glass-gold-light: rgba(212, 175, 55, 0.05);
+  --glass-gold-medium: rgba(212, 175, 55, 0.15);
+  --glass-violet: rgba(106, 27, 154, 0.1);
+  --glass-violet-light: rgba(106, 27, 154, 0.05);
+  --glass-violet-medium: rgba(106, 27, 154, 0.15);
+  --glass-border: rgba(212, 175, 55, 0.2);
+  --glass-border-light: rgba(212, 175, 55, 0.1);
+  --glass-border-strong: rgba(212, 175, 55, 0.3);
+  
+  /* ===== SHADOW SYSTEM ===== */
+  /* Elevation and depth */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  
+  /* ===== GLOW EFFECTS ===== */
+  /* Brand-specific glow and shimmer */
+  --glow-gold: 0 0 20px rgba(212, 175, 55, 0.5);
+  --glow-gold-strong: 0 0 40px rgba(212, 175, 55, 0.8);
+  --glow-gold-subtle: 0 0 10px rgba(212, 175, 55, 0.3);
+  --glow-violet: 0 0 20px rgba(106, 27, 154, 0.5);
+  --glow-violet-strong: 0 0 40px rgba(106, 27, 154, 0.8);
+  --glow-violet-subtle: 0 0 10px rgba(106, 27, 154, 0.3);
+  --glow-bronze: 0 0 20px rgba(205, 127, 50, 0.5);
+  --glow-champagne: 0 0 15px rgba(247, 231, 206, 0.4);
+  
+  /* ===== SPACING SCALE ===== */
+  /* Consistent spacing system */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+  --space-40: 10rem;    /* 160px */
+  --space-48: 12rem;    /* 192px */
+  --space-56: 14rem;    /* 224px */
+  --space-64: 16rem;    /* 256px */
+  
+  /* ===== BORDER RADIUS SCALE ===== */
+  /* Consistent border radius system */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;    /* 2px */
+  --radius-base: 0.25rem;   /* 4px */
+  --radius-md: 0.375rem;    /* 6px */
+  --radius-lg: 0.5rem;      /* 8px */
+  --radius-xl: 0.75rem;     /* 12px */
+  --radius-2xl: 1rem;       /* 16px */
+  --radius-3xl: 1.5rem;     /* 24px */
+  --radius-full: 9999px;    /* Fully rounded */
+  
+  /* ===== Z-INDEX SCALE ===== */
+  /* Layering system */
+  --z-auto: auto;
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+  
+  /* ===== TRANSITION SYSTEM ===== */
+  /* Animation timing and easing */
+  --transition-fast: 150ms;
+  --transition-base: 250ms;
+  --transition-slow: 350ms;
+  --transition-slower: 500ms;
+  
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* ===== BLUR EFFECTS ===== */
+  /* Backdrop filter values */
+  --blur-none: 0;
+  --blur-sm: 4px;
+  --blur-base: 8px;
+  --blur-md: 12px;
+  --blur-lg: 16px;
+  --blur-xl: 24px;
+  --blur-2xl: 40px;
+  --blur-3xl: 64px;
+  
+  /* ===== OPACITY SCALE ===== */
+  /* Transparency levels */
+  --opacity-0: 0;
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;
+  --opacity-100: 1;
+  
+  /* ===== BREAKPOINTS ===== */
+  /* Responsive design breakpoints */
+  --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* ===== CONTAINER SIZES ===== */
+  /* Max-width containers */
+  --container-xs: 475px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  --container-full: 100%;
+  
+  /* ===== COMPONENT SPECIFIC VARIABLES ===== */
+  /* Header */
+  --header-height: 80px;
+  --header-height-mobile: 64px;
+  
+  /* Navigation */
+  --nav-width: 280px;
+  --nav-width-collapsed: 80px;
+  
+  /* Cards */
+  --card-padding: var(--space-6);
+  --card-padding-sm: var(--space-4);
+  --card-border-radius: var(--radius-2xl);
+  
+  /* Buttons */
+  --button-height: 44px;
+  --button-height-sm: 36px;
+  --button-height-lg: 52px;
+  --button-padding-x: var(--space-6);
+  --button-padding-x-sm: var(--space-4);
+  --button-padding-x-lg: var(--space-8);
+  
+  /* Forms */
+  --input-height: 44px;
+  --input-padding-x: var(--space-4);
+  --input-border-radius: var(--radius-lg);
+  
+  /* Progress */
+  --progress-height: 8px;
+  --progress-height-sm: 4px;
+  --progress-height-lg: 12px;
+}
+
+/* ===== DARK MODE OVERRIDES ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Enhanced contrast for dark mode */
+    --text-primary: #ffffff;
+    --text-secondary: #f0f0f0;
+    --text-muted: #cccccc;
+    
+    /* Adjusted glass effects for better visibility */
+    --glass-white: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(212, 175, 55, 0.25);
+  }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+  :root {
+    /* Enhanced contrast ratios */
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --royalust-gold: #ffd700;
+    --glass-border: rgba(255, 255, 255, 0.5);
+    
+    /* Remove subtle effects for clarity */
+    --glow-gold: none;
+    --glow-violet: none;
+    --blur-base: 0;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    /* Faster transitions for accessibility */
+    --transition-fast: 0ms;
+    --transition-base: 0ms;
+    --transition-slow: 0ms;
+    --transition-slower: 0ms;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  :root {
+    /* Print-optimized colors */
+    --cosmic-void: #ffffff;
+    --deep-navy: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --royalust-gold: #000000;
+    
+    /* Remove effects for print */
+    --glow-gold: none;
+    --glow-violet: none;
+    --glass-white: transparent;
+    --glass-border: #cccccc;
+  }
+}

@@ -1,0 +1,411 @@
+/* ===================================================================
+   HOVER EFFECTS MODULE
+   Interactive element animations with gold/violet brand colors
+   =================================================================== */
+
+/* Base Hover Transitions */
+.hover-transition {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-smooth {
+  transition: all 0.2s ease-out;
+}
+
+.hover-bounce {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Gold Shimmer Hover Effects */
+.gold-shimmer-hover {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-position: -200% 0;
+  transition: all 0.3s ease;
+}
+
+.gold-shimmer-hover:hover {
+  background-position: 200% 0;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+  transform: translateY(-2px);
+}
+
+.gold-shimmer-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.3) 50%,
+    transparent 100%
+  );
+  transition: left 0.6s ease;
+}
+
+.gold-shimmer-hover:hover::before {
+  left: 100%;
+}
+
+/* Violet Glow Hover Effects */
+.violet-glow-hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(106, 27, 154, 0.2);
+}
+
+.violet-glow-hover:hover {
+  border-color: rgba(106, 27, 154, 0.6);
+  box-shadow: 
+    0 0 20px rgba(106, 27, 154, 0.3),
+    inset 0 0 20px rgba(106, 27, 154, 0.1);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) rotateX(5deg) rotateY(2deg);
+  box-shadow: 
+    0 25px 80px rgba(106, 27, 154, 0.25),
+    0 0 40px rgba(212, 175, 55, 0.1);
+}
+
+.card-hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.05) 0%,
+    transparent 50%,
+    rgba(106, 27, 154, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.card-hover:hover::after {
+  opacity: 1;
+}
+
+/* Button Hover Effects */
+.btn-primary-hover {
+  background: linear-gradient(135deg, var(--bronze-light), var(--royalust-gold));
+  color: var(--midnight-blue);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary-hover:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 10px 30px rgba(212, 175, 55, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.btn-primary-hover:hover::before {
+  left: 100%;
+}
+
+.btn-secondary-hover {
+  background: transparent;
+  color: var(--champagne);
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-hover:hover {
+  border-color: rgba(212, 175, 55, 0.8);
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--royalust-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+/* Progress Ring Hover */
+.progress-ring-hover {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.progress-ring-hover:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+}
+
+.progress-ring-hover:hover .progress-circle {
+  stroke-width: 8;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+}
+
+/* Text Hover Effects */
+.text-gold-hover {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.text-gold-hover:hover {
+  color: var(--royalust-gold);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  transform: translateY(-1px);
+}
+
+.text-violet-hover {
+  transition: all 0.3s ease;
+}
+
+.text-violet-hover:hover {
+  color: var(--ethereal-purple);
+  text-shadow: 0 0 10px rgba(106, 27, 154, 0.6);
+}
+
+/* Link Hover Effects */
+.link-elegant-hover {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-elegant-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--royalust-gold), var(--ethereal-purple));
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.link-elegant-hover:hover::after {
+  width: 100%;
+}
+
+.link-elegant-hover:hover {
+  color: var(--royalust-gold);
+}
+
+/* Icon Hover Effects */
+.icon-hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.icon-hover:hover {
+  transform: scale(1.2) rotate(10deg);
+  color: var(--royalust-gold);
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+}
+
+.icon-bounce-hover {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-bounce-hover:hover {
+  transform: scale(1.3) translateY(-5px);
+  color: var(--ethereal-purple);
+}
+
+/* Checklist Item Hover */
+.checklist-item-hover {
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.checklist-item-hover:hover {
+  background: rgba(106, 27, 154, 0.1);
+  border-left-color: var(--royalust-gold);
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(106, 27, 154, 0.2);
+}
+
+/* Category Header Hover */
+.category-header-hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.category-header-hover:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(106, 27, 154, 0.1) 0%,
+    rgba(212, 175, 55, 0.05) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(106, 27, 154, 0.2);
+}
+
+.category-header-hover:hover .category-title {
+  color: var(--royalust-gold);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Floating Action Button Hover */
+.fab-hover {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.fab-hover:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 
+    0 20px 40px rgba(106, 27, 154, 0.3),
+    0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.fab-hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.3) 0%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  border-radius: 50%;
+}
+
+.fab-hover:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+/* Tooltip Hover Trigger */
+.tooltip-hover {
+  position: relative;
+}
+
+.tooltip-hover:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-5px);
+}
+
+/* Glass Effect Hover */
+.glass-hover {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-hover:hover {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 32px rgba(106, 27, 154, 0.2);
+}
+
+/* Magnetic Hover Effect */
+.magnetic-hover {
+  transition: transform 0.2s ease-out;
+}
+
+.magnetic-hover:hover {
+  transform: translate(var(--mouse-x, 0), var(--mouse-y, 0)) scale(1.05);
+}
+
+/* Ripple Effect on Hover */
+.ripple-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.3) 0%,
+    rgba(106, 27, 154, 0.2) 50%,
+    transparent 100%
+  );
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ripple-hover:hover::after {
+  width: 300%;
+  height: 300%;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .hover-transition,
+  .hover-smooth,
+  .hover-bounce,
+  .gold-shimmer-hover,
+  .violet-glow-hover,
+  .card-hover,
+  .btn-primary-hover,
+  .btn-secondary-hover,
+  .progress-ring-hover,
+  .text-gold-hover,
+  .text-violet-hover,
+  .link-elegant-hover,
+  .icon-hover,
+  .icon-bounce-hover,
+  .checklist-item-hover,
+  .category-header-hover,
+  .fab-hover,
+  .glass-hover,
+  .magnetic-hover,
+  .ripple-hover {
+    transition: none;
+    transform: none;
+  }
+  
+  .card-hover:hover,
+  .btn-primary-hover:hover,
+  .progress-ring-hover:hover,
+  .fab-hover:hover {
+    transform: none;
+  }
+}

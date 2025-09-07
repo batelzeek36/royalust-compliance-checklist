@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>Responsive Test - Royalust Compliance</title>
+    
+    <!-- Mobile Optimization Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a1a">
+    
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/theme-variables.css">
+    <link rel="stylesheet" href="assets/css/gradients.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/mobile-layout.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 25%, #16213e 50%, #0f1419 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .test-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+        }
+        
+        .test-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .test-card {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(106, 27, 154, 0.2);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .breakpoint-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: var(--royalust-gold, #d4af37);
+            color: var(--midnight-blue, #0f1419);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.875rem;
+            z-index: 1000;
+        }
+        
+        .device-info {
+            background: rgba(106, 27, 154, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .touch-test {
+            padding: 2rem;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 12px;
+            text-align: center;
+            user-select: none;
+        }
+        
+        .swipeable {
+            background: rgba(106, 27, 154, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            cursor: grab;
+        }
+        
+        .swipeable:active {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container breakpoint-debug">
+        <h1 class="text-responsive-3xl">Responsive Test Page</h1>
+        <p class="text-responsive-base">Testing modular responsive design and mobile optimization</p>
+        
+        <div class="breakpoint-indicator" id="breakpoint-indicator">
+            Loading...
+        </div>
+        
+        <div class="test-section">
+            <h2>Device Information</h2>
+            <div class="device-info" id="device-info">
+                <p><strong>Current Breakpoint:</strong> <span id="current-breakpoint">-</span></p>
+                <p><strong>Device Category:</strong> <span id="device-category">-</span></p>
+                <p><strong>Screen Size:</strong> <span id="screen-size">-</span></p>
+                <p><strong>Touch Device:</strong> <span id="touch-device">-</span></p>
+                <p><strong>Orientation:</strong> <span id="orientation">-</span></p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Responsive Grid Test</h2>
+            <div class="test-grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div class="test-card">Card 1 - Hover me on desktop</div>
+                <div class="test-card">Card 2 - Touch me on mobile</div>
+                <div class="test-card">Card 3 - Responsive behavior</div>
+                <div class="test-card">Card 4 - Grid adaptation</div>
+                <div class="test-card">Card 5 - Layout test</div>
+                <div class="test-card">Card 6 - Breakpoint test</div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Touch Interaction Test</h2>
+            <div class="touch-test">
+                <p>Try the following interactions:</p>
+                <ul style="text-align: left; max-width: 400px; margin: 1rem auto;">
+                    <li><strong>Desktop:</strong> Hover over cards above</li>
+                    <li><strong>Mobile:</strong> Tap cards, try swiping</li>
+                    <li><strong>Touch:</strong> Long press for context menu</li>
+                    <li><strong>All:</strong> Resize window to test breakpoints</li>
+                </ul>
+            </div>
+            
+            <div class="swipeable" data-swipe-action="test">
+                <h3>Swipeable Element</h3>
+                <p>Swipe left or right on mobile devices</p>
+                <p>Click and drag on desktop</p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Responsive Typography</h2>
+            <h1 class="text-responsive-4xl">Heading 1 - Responsive</h1>
+            <h2 class="text-responsive-3xl">Heading 2 - Responsive</h2>
+            <h3 class="text-responsive-2xl">Heading 3 - Responsive</h3>
+            <p class="text-responsive-base">Body text that scales responsively with viewport size and maintains readability across all devices.</p>
+            <p class="text-responsive-sm">Small text that remains legible on mobile devices.</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>Spacing Test</h2>
+            <div class="p-responsive-md">
+                <p>This container uses responsive padding that adapts to screen size.</p>
+                <div class="space-responsive-lg">
+                    <p>Responsive margin spacing between elements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript Modules -->
+    <script src="assets/js/responsive-config.js"></script>
+    <script src="assets/js/touch-interactions.js"></script>
+    
+    <script>
+        // Test script to verify responsive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const breakpointIndicator = document.getElementById('breakpoint-indicator');
+            const currentBreakpointSpan = document.getElementById('current-breakpoint');
+            const deviceCategorySpan = document.getElementById('device-category');
+            const screenSizeSpan = document.getElementById('screen-size');
+            const touchDeviceSpan = document.getElementById('touch-device');
+            const orientationSpan = document.getElementById('orientation');
+            
+            function updateDeviceInfo() {
+                if (window.responsiveConfig) {
+                    const config = responsiveConfig.getConfig();
+                    
+                    breakpointIndicator.textContent = config.currentBreakpoint.toUpperCase();
+                    currentBreakpointSpan.textContent = config.currentBreakpoint;
+                    deviceCategorySpan.textContent = config.deviceCategory;
+                    screenSizeSpan.textContent = `${window.innerWidth} x ${window.innerHeight}`;
+                    touchDeviceSpan.textContent = config.isTouchDevice ? 'Yes' : 'No';
+                    orientationSpan.textContent = window.innerWidth > window.innerHeight ? 'Landscape' : 'Portrait';
+                }
+            }
+            
+            // Initial update
+            updateDeviceInfo();
+            
+            // Listen for breakpoint changes
+            window.addEventListener('breakpointChange', function(event) {
+                console.log('Breakpoint changed:', event.detail);
+                updateDeviceInfo();
+            });
+            
+            // Listen for resize
+            window.addEventListener('resize', updateDeviceInfo);
+            window.addEventListener('orientationchange', () => {
+                setTimeout(updateDeviceInfo, 100);
+            });
+            
+            // Test touch interactions
+            document.addEventListener('swipe', function(event) {
+                console.log('Swipe detected:', event.detail);
+                alert(`Swiped ${event.detail.direction} on ${event.detail.element.textContent}`);
+            });
+            
+            document.addEventListener('contextAction', function(event) {
+                console.log('Context action:', event.detail);
+                alert(`Context action: ${event.detail.action}`);
+            });
+            
+            // Test desktop hover (should not interfere with mobile)
+            const testCards = document.querySelectorAll('.test-card');
+            testCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    if (responsiveConfig && responsiveConfig.isDesktop()) {
+                        console.log('Desktop hover on:', this.textContent);
+                    }
+                });
+                
+                card.addEventListener('click', function() {
+                    console.log('Card clicked:', this.textContent);
+                    if (responsiveConfig && responsiveConfig.isMobile()) {
+                        this.style.background = 'rgba(212, 175, 55, 0.2)';
+                        setTimeout(() => {
+                            this.style.background = '';
+                        }, 300);
+                    }
+                });
+            });
+            
+            console.log('Responsive test page initialized');
+            console.log('Responsive config:', responsiveConfig ? responsiveConfig.getConfig() : 'Not available');
+        });
+    </script>
+</body>
+</html>

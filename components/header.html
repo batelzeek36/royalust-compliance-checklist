@@ -1,0 +1,60 @@
+<!--
+  Header Component Template
+  Royalust Compliance Dashboard
+  
+  Matches reference design with:
+  - ROYALUST typography in Cinzel font with gold/bronze styling
+  - Tagline in Cormorant Garamond italic
+  - Progress ring visualization
+  - Responsive layout maintaining brand aesthetic
+-->
+
+<header class="dashboard-header" id="dashboard-header">
+  <!-- Crystalline shimmer effect overlay -->
+  <div class="header-shimmer-overlay"></div>
+  
+  <div class="header-content">
+    <!-- Brand Section -->
+    <div class="header-branding">
+      <h1 class="royalust-heading" id="royalust-title">
+        <span class="royalust-text">ROYALUST</span>
+      </h1>
+      <p class="header-tagline" id="header-tagline">
+        Big Island Retreat Compliance Dashboard
+      </p>
+    </div>
+    
+    <!-- Progress Overview Section -->
+    <div class="header-progress-overview" id="progress-overview">
+      <div class="progress-ring-container">
+        <!-- Progress Ring SVG will be injected here by progress-ring.js -->
+        <div id="progress-ring-mount"></div>
+        
+        <!-- Progress Text Overlay -->
+        <div class="progress-text-overlay">
+          <span class="progress-percentage" id="progress-percentage">0%</span>
+          <span class="progress-label">Complete</span>
+        </div>
+      </div>
+      
+      <!-- Progress Details -->
+      <div class="progress-details">
+        <div class="progress-stat">
+          <span class="stat-value" id="completed-items">0</span>
+          <span class="stat-label">Completed</span>
+        </div>
+        <div class="progress-stat">
+          <span class="stat-value" id="total-items">0</span>
+          <span class="stat-label">Total Items</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu Toggle (for future mobile navigation) -->
+  <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+    <span class="menu-icon"></span>
+    <span class="menu-icon"></span>
+    <span class="menu-icon"></span>
+  </button>
+</header>

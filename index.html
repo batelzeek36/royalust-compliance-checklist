@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Optimization Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Royalust Compliance">
+    <meta name="theme-color" content="#0a0a1a">
+    <meta name="msapplication-navbutton-color" content="#0a0a1a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0a1a">
     <meta name="description" content="Royalust Compliance Checklist - Interactive dashboard for tracking regulatory compliance of Big Island retreat operations">
     <meta name="keywords" content="royalust, compliance, checklist, big island, retreat, regulatory, dashboard">
     <meta name="author" content="Royalust Development Team">
@@ -34,17 +43,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS Modules - Modular Architecture (300-400 lines each) -->
-    <!-- Theme and base styles will be loaded here -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/theme-variables.css">
+    <link rel="stylesheet" href="assets/css/gradients.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/mobile-layout.css">
     
     <title>Royalust Compliance Checklist | Interactive Dashboard</title>
+    
+    <style>
+        /* Basic page setup for header component test */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 25%, #16213e 50%, #0f1419 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .app-container {
+            min-height: 100vh;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header-container {
+            margin-bottom: 2rem;
+        }
+    </style>
 </head>
 <body>
     <!-- Main Application Container -->
     <div id="app" class="app-container">
         <!-- Header component will be loaded here -->
-        <header id="header-container" class="header-container">
+        <div id="header-container" class="header-container">
             <!-- Modular header component -->
-        </header>
+        </div>
         
         <!-- Main content area -->
         <main id="main-content" class="main-content">
@@ -71,15 +115,51 @@
         <p>Loading Royalust Compliance Dashboard...</p>
     </div>
     
-    <!-- JavaScript Modules - Modular Architecture (300-400 lines each) -->
-    <!-- Core application modules will be loaded here -->
+    <!-- JavaScript Modules - Header Component Focus (Task 5) -->
+    <script src="assets/js/responsive-config.js"></script>
+    <script src="assets/js/progress-ring.js"></script>
+    <script src="assets/js/header-component.js"></script>
+    <script src="assets/js/touch-interactions.js"></script>
     
     <!-- Application initialization -->
     <script>
-        // Initialize modular application
+        // Initialize header component only (task 5 focus)
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Royalust Compliance Checklist - Modular Architecture Initialized');
-            // Application initialization will be handled by modular app.js
+            console.log('Royalust Compliance Checklist - Header Component Test');
+            
+            // Initialize header component
+            if (typeof HeaderComponent !== 'undefined') {
+                const headerContainer = document.getElementById('header-container');
+                if (headerContainer) {
+                    try {
+                        const header = new HeaderComponent(headerContainer, {
+                            animated: true,
+                            progressRing: true,
+                            shimmerEffect: true,
+                            responsive: true
+                        });
+                        
+                        console.log('Header component initialized successfully');
+                        
+                        // Test with sample data after a short delay
+                        setTimeout(() => {
+                            header.updateProgress({
+                                progress: 25,
+                                completedItems: 11,
+                                totalItems: 45
+                            });
+                            console.log('Header progress updated');
+                        }, 1500);
+                        
+                    } catch (error) {
+                        console.error('Failed to initialize header component:', error);
+                    }
+                } else {
+                    console.error('Header container not found');
+                }
+            } else {
+                console.error('HeaderComponent class not available');
+            }
         });
     </script>
 </body>

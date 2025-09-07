@@ -1,0 +1,602 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-12-06T00:00:00Z",
+    "totalCategories": 9,
+    "totalItems": 44,
+    "description": "Royalust Big Island Retreat Compliance Checklist",
+    "dataSchema": "compliance-schema-v1",
+    "maintainer": "Royalust Operations Team"
+  },
+  "categories": [
+    {
+      "id": "safe-operating-mode",
+      "title": "Safe Operating Mode",
+      "description": "Current low-risk operations framework for day-use educational workshops",
+      "icon": "🏞",
+      "priority": "critical",
+      "riskLevel": "low",
+      "order": 1,
+      "items": [
+        {
+          "id": "day-use-only",
+          "title": "Run day-use, private educational workshops under PMA",
+          "description": "Frame as educational retreats/sustainability workshops - fits Ag District uses",
+          "completed": false,
+          "priority": "critical",
+          "category": "operations",
+          "sources": [
+            {
+              "title": "Hawaii County Code Ch.25 - Zoning",
+              "url": "https://www.hawaiicounty.gov/i-want-to/read/county-code",
+              "type": "regulation"
+            },
+            {
+              "title": "County Zoning & Land Use Hub",
+              "url": "https://www.planning.hawaiicounty.gov/resources/resources-references/zoning-land-use",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "id": "educational-framing",
+          "title": "Frame activities as educational retreats and sustainability workshops",
+          "description": "Ensure all activities align with Agricultural District permitted uses",
+          "completed": false,
+          "priority": "high",
+          "category": "operations",
+          "sources": [
+            {
+              "title": "State Land Use Districts Map",
+              "url": "https://luc.hawaii.gov/maps/",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "id": "future-overnight-plan",
+          "title": "Plan for future overnight operations",
+          "description": "Either partner with permitted lodging OR pursue County permits for accommodations + TAT filings",
+          "completed": false,
+          "priority": "medium",
+          "category": "planning",
+          "sources": [
+            {
+              "title": "Special Permit Application (County Planning)",
+              "url": "https://records.hawaiicounty.gov/WebLink/1/edoc/55600/Special%20Permit.pdf",
+              "type": "form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structures-building",
+      "title": "Structures & Building",
+      "description": "Keep all structures legal or exempt under Agricultural District rules",
+      "icon": "🏠",
+      "priority": "critical",
+      "riskLevel": "medium",
+      "order": 2,
+      "items": [
+        {
+          "id": "exempt-structures-only",
+          "title": "Use only permitted or exempt accessory structures",
+          "description": "Non-habitable structures ≤600 sq ft on Agricultural land",
+          "completed": false,
+          "priority": "critical",
+          "category": "building",
+          "sources": [
+            {
+              "title": "EPIC Building Permit System",
+              "url": "https://hawaii-county-public-works-hawaiicountygis.hub.arcgis.com/pages/blg-epic-help-library",
+              "type": "system"
+            }
+          ]
+        },
+        {
+          "id": "no-permanent-facilities",
+          "title": "NO permanent sleeping or plumbing in exempt structures",
+          "description": "Exempt sheds/yurts must remain non-habitable",
+          "completed": false,
+          "priority": "critical",
+          "category": "building",
+          "sources": [
+            {
+              "title": "Building Division Information",
+              "url": "https://hawaii-county-public-works-hawaiicountygis.hub.arcgis.com/pages/building",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "id": "ag-exempt-declaration",
+          "title": "File Ag-exempt declaration with County if required",
+          "description": "Keep acknowledgment in compliance binder",
+          "completed": false,
+          "priority": "high",
+          "category": "documentation",
+          "sources": [
+            {
+              "title": "Plan Approval Application",
+              "url": "https://records.hawaiicounty.gov/WebLink/1/edoc/70368/Plan%20Approval%20Application.pdf",
+              "type": "form"
+            }
+          ]
+        },
+        {
+          "id": "large-tent-permits",
+          "title": "Obtain Fire Dept permit for tents >700 sq ft",
+          "description": "Required for any temporary structures exceeding size limit",
+          "completed": false,
+          "priority": "high",
+          "category": "permits",
+          "sources": [
+            {
+              "title": "Hawaii County Fire Department",
+              "url": "https://www.hawaiicounty.gov/departments/fire",
+              "type": "department"
+            }
+          ]
+        },
+        {
+          "id": "assembly-permits",
+          "title": "Obtain Assembly permit for occupancy ≥300 people",
+          "description": "Required when assembly load reaches 300 or more persons",
+          "completed": false,
+          "priority": "high",
+          "category": "permits",
+          "sources": [
+            {
+              "title": "Building Permit Information",
+              "url": "https://hawaii-county-public-works-hawaiicountygis.hub.arcgis.com/pages/blg-permit-info",
+              "type": "reference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health-food-sanitation",
+      "title": "Health, Food & Sanitation",
+      "description": "DOH compliance for food service and sanitation facilities",
+      "icon": "🧼🍲",
+      "priority": "critical",
+      "riskLevel": "medium",
+      "order": 3,
+      "items": [
+        {
+          "id": "food-establishment-permit",
+          "title": "Obtain DOH Special Event Food Establishment permit OR use licensed caterer",
+          "description": "Required for any food preparation or service activities",
+          "completed": false,
+          "priority": "critical",
+          "category": "health",
+          "sources": [
+            {
+              "title": "DOH e-Permitting System",
+              "url": "https://eha-cloud.doh.hawaii.gov/epermit/",
+              "type": "system"
+            }
+          ]
+        },
+        {
+          "id": "portable-toilets",
+          "title": "Provide portable toilets and hand-wash stations",
+          "description": "Required sanitation facilities with service documentation",
+          "completed": false,
+          "priority": "critical",
+          "category": "sanitation",
+          "sources": [
+            {
+              "title": "Hawaii DOH Sanitation Requirements",
+              "url": "https://health.hawaii.gov/",
+              "type": "regulation"
+            }
+          ]
+        },
+        {
+          "id": "sanitation-receipts",
+          "title": "Keep portable toilet service receipts",
+          "description": "Document compliance with sanitation service contracts",
+          "completed": false,
+          "priority": "high",
+          "category": "documentation",
+          "sources": []
+        },
+        {
+          "id": "health-compliance-docs",
+          "title": "Document health compliance in binder",
+          "description": "Maintain all health and sanitation permits and receipts",
+          "completed": false,
+          "priority": "high",
+          "category": "documentation",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "private-event-controls",
+      "title": "Make the Event Private",
+      "description": "Establish and maintain private membership association structure",
+      "icon": "🔒",
+      "priority": "critical",
+      "riskLevel": "low",
+      "order": 4,
+      "items": [
+        {
+          "id": "membership-process",
+          "title": "Implement membership application → approval → signed agreement process",
+          "description": "Formal process to establish private membership status",
+          "completed": false,
+          "priority": "critical",
+          "category": "legal",
+          "sources": []
+        },
+        {
+          "id": "private-website-language",
+          "title": "Update website: 'Private, members-only; application/invitation only'",
+          "description": "Clear messaging about private nature of events",
+          "completed": false,
+          "priority": "critical",
+          "category": "marketing",
+          "sources": []
+        },
+        {
+          "id": "no-public-sales",
+          "title": "Eliminate all public ticket sales",
+          "description": "No Eventbrite, public listings, or open sales channels",
+          "completed": false,
+          "priority": "critical",
+          "category": "operations",
+          "sources": []
+        },
+        {
+          "id": "private-signage",
+          "title": "Install gate signage: 'Private Event — Members & Invited Guests Only'",
+          "description": "Clear on-site indication of private event status",
+          "completed": false,
+          "priority": "high",
+          "category": "signage",
+          "sources": []
+        },
+        {
+          "id": "member-roster",
+          "title": "Maintain member roster on site",
+          "description": "Current list of approved members and guests available during events",
+          "completed": false,
+          "priority": "high",
+          "category": "documentation",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "neighbor-nuisance-controls",
+      "title": "Neighbor & Nuisance Controls",
+      "description": "Community relations and impact mitigation measures",
+      "icon": "🏘",
+      "priority": "high",
+      "riskLevel": "medium",
+      "order": 5,
+      "items": [
+        {
+          "id": "headcount-parking-cap",
+          "title": "Set headcount cap tied to parking capacity",
+          "description": "Limit attendance based on available on-site parking spaces",
+          "completed": false,
+          "priority": "high",
+          "category": "operations",
+          "sources": []
+        },
+        {
+          "id": "noise-plan-curfew",
+          "title": "Implement noise plan and curfew (quiet hours)",
+          "description": "Establish and enforce quiet hours to minimize neighbor impact",
+          "completed": false,
+          "priority": "high",
+          "category": "operations",
+          "sources": []
+        },
+        {
+          "id": "onsite-parking-only",
+          "title": "Require on-site parking only with cones/attendant",
+          "description": "No street parking or off-site overflow parking",
+          "completed": false,
+          "priority": "high",
+          "category": "operations",
+          "sources": []
+        },
+        {
+          "id": "neighbor-contact-phone",
+          "title": "Post neighbor contact phone at entrance",
+          "description": "Provide direct contact method for neighbor concerns",
+          "completed": false,
+          "priority": "high",
+          "category": "community",
+          "sources": []
+        },
+        {
+          "id": "document-neighbor-response",
+          "title": "Document neighbor contact responses",
+          "description": "Keep records of any neighbor communications or concerns",
+          "completed": false,
+          "priority": "medium",
+          "category": "documentation",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "compliance-documentation",
+      "title": "Compliance Binder",
+      "description": "Required documentation to maintain at every event",
+      "icon": "📂",
+      "priority": "critical",
+      "riskLevel": "high",
+      "order": 6,
+      "items": [
+        {
+          "id": "zoning-documents",
+          "title": "TMK zoning printout + Code Ch.25 excerpts",
+          "description": "Current zoning verification and relevant code sections",
+          "completed": false,
+          "priority": "critical",
+          "category": "documentation",
+          "sources": [
+            {
+              "title": "TMK + Maps Hub",
+              "url": "https://www.planning.hawaiicounty.gov/resources/resources-references/maps",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "id": "building-documents",
+          "title": "EPIC/Building docs + ag-exempt declarations",
+          "description": "All building permits and agricultural exemption documentation",
+          "completed": false,
+          "priority": "critical",
+          "category": "documentation",
+          "sources": []
+        },
+        {
+          "id": "permits-contracts",
+          "title": "Tent/Fire permits, food permits, portable toilet contract",
+          "description": "All current permits and service contracts",
+          "completed": false,
+          "priority": "critical",
+          "category": "documentation",
+          "sources": []
+        },
+        {
+          "id": "insurance-certificates",
+          "title": "Insurance certificates (general liability + participant accident)",
+          "description": "Current insurance coverage documentation",
+          "completed": false,
+          "priority": "critical",
+          "category": "insurance",
+          "sources": []
+        },
+        {
+          "id": "member-documentation",
+          "title": "Member roster + signed agreements + safety briefing sheet",
+          "description": "All member-related documentation and safety protocols",
+          "completed": false,
+          "priority": "critical",
+          "category": "documentation",
+          "sources": []
+        },
+        {
+          "id": "incident-log",
+          "title": "Incident log",
+          "description": "Record of any incidents, concerns, or safety issues",
+          "completed": false,
+          "priority": "high",
+          "category": "safety",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "taxes-filings",
+      "title": "Taxes & Filings",
+      "description": "Tax compliance and government filings",
+      "icon": "💰",
+      "priority": "critical",
+      "riskLevel": "medium",
+      "order": 7,
+      "items": [
+        {
+          "id": "get-collection-remittance",
+          "title": "Collect and remit GET on dues/fees",
+          "description": "General Excise Tax compliance for all revenue",
+          "completed": false,
+          "priority": "critical",
+          "category": "taxes",
+          "sources": [
+            {
+              "title": "GET Information & Registration",
+              "url": "https://tax.hawaii.gov/geninfo/get/",
+              "type": "system"
+            }
+          ]
+        },
+        {
+          "id": "tat-overnight-consideration",
+          "title": "Apply TAT (10.25%) + County 3% for overnight consideration",
+          "description": "Transient Accommodations Tax if any overnight stays are provided",
+          "completed": false,
+          "priority": "high",
+          "category": "taxes",
+          "sources": [
+            {
+              "title": "State TAT Overview",
+              "url": "https://files.hawaii.gov/tax/legal/brochures/TAT_brochure-23.pdf",
+              "type": "reference"
+            },
+            {
+              "title": "County TAT Information",
+              "url": "https://www.hawaiicounty.gov/departments/finance/transient-accommodations-tax-tat",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "id": "tat-filings",
+          "title": "File TA-1/TA-2 + County portal submissions",
+          "description": "Required state and county TAT filings if applicable",
+          "completed": false,
+          "priority": "high",
+          "category": "taxes",
+          "sources": [
+            {
+              "title": "County TAT Payment Portal",
+              "url": "https://tat.ehawaii.gov/tat/",
+              "type": "system"
+            }
+          ]
+        },
+        {
+          "id": "separate-pma-books",
+          "title": "Keep PMA books separate from LLC",
+          "description": "Maintain distinct financial records for different entities",
+          "completed": false,
+          "priority": "high",
+          "category": "accounting",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "risk-management-tripwires",
+      "title": "Risk Management (Tripwires)",
+      "description": "Automatic pause triggers to prevent compliance violations",
+      "icon": "🚨",
+      "priority": "critical",
+      "riskLevel": "high",
+      "order": 8,
+      "items": [
+        {
+          "id": "no-sleeping-plumbing-additions",
+          "title": "NEVER add sleeping/plumbing to exempt structure",
+          "description": "Automatic pause trigger - would require building permits",
+          "completed": false,
+          "priority": "critical",
+          "category": "building",
+          "sources": []
+        },
+        {
+          "id": "large-tent-permit-compliance",
+          "title": "NEVER use tents >700 sq ft without Fire permit",
+          "description": "Automatic pause trigger - requires Fire Department approval",
+          "completed": false,
+          "priority": "critical",
+          "category": "permits",
+          "sources": []
+        },
+        {
+          "id": "no-public-advertising",
+          "title": "NEVER advertise public tickets",
+          "description": "Automatic pause trigger - would violate private event status",
+          "completed": false,
+          "priority": "critical",
+          "category": "marketing",
+          "sources": []
+        },
+        {
+          "id": "headcount-limits",
+          "title": "NEVER scale headcount beyond safe parking/noise capacity",
+          "description": "Automatic pause trigger - would create neighbor and safety issues",
+          "completed": false,
+          "priority": "critical",
+          "category": "operations",
+          "sources": []
+        },
+        {
+          "id": "complaint-inspector-response",
+          "title": "ANY neighbor complaint or inspector visit → pause + remediate",
+          "description": "Immediate response protocol for external concerns",
+          "completed": false,
+          "priority": "critical",
+          "category": "response",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "investor-reassurance",
+      "title": "Investor Reassurance",
+      "description": "Four-front compliance strategy for stakeholder confidence",
+      "icon": "📜",
+      "priority": "high",
+      "riskLevel": "low",
+      "order": 9,
+      "items": [
+        {
+          "id": "private-educational-retreats",
+          "title": "Private, invitation-only educational day-use retreats under PMA",
+          "description": "Front 1: Establish clear private membership structure",
+          "completed": false,
+          "priority": "high",
+          "category": "strategy",
+          "sources": []
+        },
+        {
+          "id": "compliant-structures",
+          "title": "Only permitted or exempt non-habitable Ag structures",
+          "description": "Front 2: Maintain building code compliance with proper permits",
+          "completed": false,
+          "priority": "high",
+          "category": "strategy",
+          "sources": []
+        },
+        {
+          "id": "health-sanitation-support",
+          "title": "DOH food & sanitation support (toilets, handwash, caterers)",
+          "description": "Front 3: Professional health and safety compliance",
+          "completed": false,
+          "priority": "high",
+          "category": "strategy",
+          "sources": []
+        },
+        {
+          "id": "compliance-neighbor-plan",
+          "title": "Compliance binder + neighbor-friendly operating plan",
+          "description": "Front 4: Documentation and community relations strategy",
+          "completed": false,
+          "priority": "high",
+          "category": "strategy",
+          "sources": []
+        },
+        {
+          "id": "zoning-alignment",
+          "title": "Maintain alignment with County zoning/building rules",
+          "description": "Ongoing compliance with local regulations",
+          "completed": false,
+          "priority": "high",
+          "category": "compliance",
+          "sources": []
+        },
+        {
+          "id": "inspector-avoidance",
+          "title": "Avoid triggers that bring inspectors",
+          "description": "Proactive risk management to prevent enforcement actions",
+          "completed": false,
+          "priority": "high",
+          "category": "risk-management",
+          "sources": []
+        },
+        {
+          "id": "longterm-permit-planning",
+          "title": "Plan long-term permitted overnight options",
+          "description": "Strategic planning for future expansion with proper permits",
+          "completed": false,
+          "priority": "medium",
+          "category": "planning",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

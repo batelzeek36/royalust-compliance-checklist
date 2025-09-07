@@ -1,0 +1,199 @@
+<!-- Category Card Template -->
+<template id="category-card-template">
+    <div class="category-card" role="region" aria-labelledby="card-title">
+        <!-- Card Header -->
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+            <div class="header-left">
+                <div class="card-icon" aria-hidden="true">📋</div>
+                <div class="header-content">
+                    <h3 class="card-title" id="card-title">Category Title</h3>
+                    <p class="card-description">Category description goes here</p>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <div class="badge-container" aria-label="Category badges">
+                    <!-- Badges will be inserted here dynamically -->
+                </div>
+                
+                <div class="progress-container" aria-label="Progress indicator">
+                    <!-- Progress bar will be inserted here dynamically -->
+                </div>
+                
+                <button class="expand-button" 
+                        aria-label="Expand category details" 
+                        aria-expanded="false">
+                    <span class="expand-icon" aria-hidden="true">▼</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Card Content (Expandable) -->
+        <div class="card-content" aria-hidden="true">
+            <div class="content-inner">
+                <!-- Category Statistics -->
+                <div class="category-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Items:</span>
+                        <span class="item-count">0/0 items</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Progress:</span>
+                        <span class="progress-percentage">0%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Risk Level:</span>
+                        <span class="risk-indicator">Unknown</span>
+                    </div>
+                </div>
+
+                <!-- Checklist Container -->
+                <div class="checklist-container" role="group" aria-label="Compliance checklist items">
+                    <!-- Checklist items will be inserted here dynamically -->
+                </div>
+
+                <!-- Category Actions -->
+                <div class="category-actions">
+                    <button class="action-button secondary" 
+                            data-action="export-category"
+                            aria-label="Export category data">
+                        <span class="button-icon" aria-hidden="true">📄</span>
+                        Export Category
+                    </button>
+                    
+                    <button class="action-button secondary" 
+                            data-action="mark-all-complete"
+                            aria-label="Mark all items as complete">
+                        <span class="button-icon" aria-hidden="true">✓</span>
+                        Complete All
+                    </button>
+                    
+                    <button class="action-button secondary" 
+                            data-action="reset-category"
+                            aria-label="Reset category progress">
+                        <span class="button-icon" aria-hidden="true">↻</span>
+                        Reset
+                    </button>
+                </div>
+
+                <!-- Source Documentation Links -->
+                <div class="documentation-section">
+                    <h4 class="section-title">Related Documentation</h4>
+                    <div class="documentation-links">
+                        <!-- Documentation links will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div class="card-loading" aria-hidden="true">
+            <div class="loading-spinner" aria-label="Loading category data">
+                <div class="spinner-ring"></div>
+            </div>
+            <span class="loading-text">Loading category data...</span>
+        </div>
+
+        <!-- Error State -->
+        <div class="card-error" aria-hidden="true">
+            <div class="error-icon" aria-hidden="true">⚠️</div>
+            <div class="error-content">
+                <h4 class="error-title">Failed to Load Category</h4>
+                <p class="error-message">Unable to load category data. Please try again.</p>
+                <button class="retry-button" aria-label="Retry loading category">
+                    Retry
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- Checklist Item Template -->
+<template id="checklist-item-template">
+    <div class="checklist-item" role="listitem">
+        <div class="item-checkbox-container">
+            <input type="checkbox" 
+                   class="item-checkbox" 
+                   id="item-checkbox"
+                   aria-describedby="item-description">
+            <label for="item-checkbox" class="checkbox-label">
+                <span class="checkbox-custom" aria-hidden="true">
+                    <span class="checkbox-checkmark">✓</span>
+                </span>
+            </label>
+        </div>
+        
+        <div class="item-content">
+            <div class="item-header">
+                <h5 class="item-title">Checklist Item Title</h5>
+                <div class="item-badges">
+                    <!-- Item-specific badges -->
+                </div>
+            </div>
+            
+            <p class="item-description" id="item-description">
+                Detailed description of the compliance requirement
+            </p>
+            
+            <div class="item-metadata">
+                <div class="source-links">
+                    <!-- Source links will be populated here -->
+                </div>
+                
+                <div class="item-status">
+                    <span class="status-indicator" aria-label="Completion status">
+                        <span class="status-icon" aria-hidden="true">○</span>
+                        <span class="status-text">Not Started</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="item-actions">
+                <button class="item-action-button" 
+                        data-action="view-details"
+                        aria-label="View item details">
+                    <span class="action-icon" aria-hidden="true">👁️</span>
+                    Details
+                </button>
+                
+                <button class="item-action-button" 
+                        data-action="add-note"
+                        aria-label="Add note to item">
+                    <span class="action-icon" aria-hidden="true">📝</span>
+                    Note
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- Badge Template -->
+<template id="badge-template">
+    <span class="badge" role="status" aria-label="Status badge">
+        <span class="badge-icon" aria-hidden="true"></span>
+        <span class="badge-text">Badge Text</span>
+    </span>
+</template>
+
+<!-- Progress Bar Template -->
+<template id="progress-bar-template">
+    <div class="progress-bar-container" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar-track">
+            <div class="progress-bar-fill"></div>
+            <div class="progress-bar-glow"></div>
+        </div>
+        <div class="progress-bar-label">
+            <span class="progress-percentage">0%</span>
+        </div>
+    </div>
+</template>
+
+<!-- Tooltip Template -->
+<template id="tooltip-template">
+    <div class="tooltip" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-content">
+            Tooltip content goes here
+        </div>
+    </div>
+</template>

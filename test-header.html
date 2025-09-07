@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component Test</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/theme-variables.css">
+    <link rel="stylesheet" href="assets/css/gradients.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 25%, #16213e 50%, #0f1419 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .test-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .test-info {
+            background: rgba(156, 39, 176, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-info">
+            <h2>Header Component Test</h2>
+            <p>Testing the modular header component with ROYALUST branding and progress ring.</p>
+        </div>
+        
+        <!-- Header Component Container -->
+        <div id="header-container"></div>
+        
+        <div class="test-info">
+            <p>Check the console for initialization logs.</p>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="assets/js/progress-ring.js"></script>
+    <script src="assets/js/header-component.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Test page loaded');
+            
+            const headerContainer = document.getElementById('header-container');
+            
+            if (typeof HeaderComponent !== 'undefined') {
+                console.log('HeaderComponent class found');
+                
+                try {
+                    const header = new HeaderComponent(headerContainer, {
+                        animated: true,
+                        progressRing: true,
+                        shimmerEffect: true,
+                        responsive: true
+                    });
+                    
+                    // Test progress update after initialization
+                    setTimeout(() => {
+                        console.log('Updating progress...');
+                        header.updateProgress({
+                            progress: 35,
+                            completedItems: 16,
+                            totalItems: 45
+                        });
+                    }, 2000);
+                    
+                } catch (error) {
+                    console.error('Header initialization error:', error);
+                }
+            } else {
+                console.error('HeaderComponent class not found');
+            }
+        });
+    </script>
+</body>
+</html>

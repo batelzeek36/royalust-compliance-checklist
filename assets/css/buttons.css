@@ -1,0 +1,541 @@
+/**
+ * Buttons Module - Button Component Styles
+ * Royalust Compliance Dashboard
+ * 
+ * Comprehensive button system with elegant gold/bronze styling
+ * and interactive effects matching the brand aesthetic
+ */
+
+/* ===== BASE BUTTON STYLES ===== */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--button-padding-x);
+  height: var(--button-height);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-none);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-base) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn-base:focus {
+  outline: 2px solid var(--royalust-gold);
+  outline-offset: 2px;
+}
+
+.btn-base:disabled {
+  opacity: var(--opacity-50);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-base::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  transition: left var(--transition-slow) var(--ease-out);
+}
+
+.btn-base:hover::before {
+  left: 100%;
+}
+
+/* ===== PRIMARY BUTTON VARIANTS ===== */
+.btn-primary {
+  background: linear-gradient(135deg, var(--royalust-gold) 0%, var(--bronze-light) 100%);
+  color: var(--cosmic-void);
+  box-shadow: var(--shadow-md), var(--glow-gold-subtle);
+  font-weight: var(--font-weight-semibold);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--royalust-gold-light) 0%, var(--bronze-metallic) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--glow-gold);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md), var(--glow-gold-subtle);
+}
+
+/* ===== SECONDARY BUTTON VARIANTS ===== */
+.btn-secondary {
+  background: transparent;
+  color: var(--champagne);
+  border: 2px solid var(--glass-border);
+  backdrop-filter: blur(var(--blur-base));
+}
+
+.btn-secondary:hover {
+  background: var(--glass-gold-light);
+  border-color: var(--glass-border-strong);
+  box-shadow: var(--glow-gold-subtle);
+  color: var(--royalust-gold-light);
+}
+
+.btn-secondary:active {
+  background: var(--glass-gold-medium);
+}
+
+/* ===== GHOST BUTTON VARIANTS ===== */
+.btn-ghost {
+  background: transparent;
+  color: var(--royalust-gold);
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--glass-gold-light);
+  border-color: var(--glass-border-light);
+  box-shadow: var(--glow-gold-subtle);
+}
+
+.btn-ghost:active {
+  background: var(--glass-gold-medium);
+}
+
+/* ===== OUTLINE BUTTON VARIANTS ===== */
+.btn-outline {
+  background: transparent;
+  color: var(--royalust-gold);
+  border: 2px solid var(--royalust-gold);
+}
+
+.btn-outline:hover {
+  background: var(--royalust-gold);
+  color: var(--cosmic-void);
+  box-shadow: var(--glow-gold-subtle);
+}
+
+.btn-outline:active {
+  background: var(--royalust-gold-dark);
+  border-color: var(--royalust-gold-dark);
+}
+
+/* ===== VIOLET ACCENT VARIANTS ===== */
+.btn-violet {
+  background: linear-gradient(135deg, var(--mystic-violet) 0%, var(--ethereal-purple) 100%);
+  color: white;
+  box-shadow: var(--shadow-md), var(--glow-violet-subtle);
+}
+
+.btn-violet:hover {
+  background: linear-gradient(135deg, var(--ethereal-purple) 0%, var(--lavender-mist) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--glow-violet);
+}
+
+.btn-violet-outline {
+  background: transparent;
+  color: var(--ethereal-purple);
+  border: 2px solid var(--ethereal-purple);
+}
+
+.btn-violet-outline:hover {
+  background: var(--ethereal-purple);
+  color: white;
+  box-shadow: var(--glow-violet-subtle);
+}
+
+/* ===== STATUS BUTTON VARIANTS ===== */
+.btn-success {
+  background: linear-gradient(135deg, var(--success-green) 0%, var(--success-light) 100%);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, var(--success-light) 0%, var(--success-green) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, var(--warning-amber) 0%, var(--warning-light) 100%);
+  color: var(--cosmic-void);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, var(--warning-light) 0%, var(--warning-amber) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-error {
+  background: linear-gradient(135deg, var(--error-red) 0%, var(--error-light) 100%);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-error:hover {
+  background: linear-gradient(135deg, var(--error-light) 0%, var(--error-red) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-info {
+  background: linear-gradient(135deg, var(--info-blue) 0%, var(--info-light) 100%);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-info:hover {
+  background: linear-gradient(135deg, var(--info-light) 0%, var(--info-blue) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== BUTTON SIZES ===== */
+.btn-xs {
+  height: 28px;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-base);
+}
+
+.btn-sm {
+  height: var(--button-height-sm);
+  padding: var(--space-2) var(--button-padding-x-sm);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-md);
+}
+
+.btn-lg {
+  height: var(--button-height-lg);
+  padding: var(--space-4) var(--button-padding-x-lg);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-xl);
+}
+
+.btn-xl {
+  height: 60px;
+  padding: var(--space-5) var(--space-10);
+  font-size: var(--font-size-xl);
+  border-radius: var(--radius-2xl);
+}
+
+/* ===== BUTTON SHAPES ===== */
+.btn-rounded {
+  border-radius: var(--radius-full);
+}
+
+.btn-square {
+  border-radius: 0;
+}
+
+.btn-circle {
+  width: var(--button-height);
+  height: var(--button-height);
+  padding: 0;
+  border-radius: 50%;
+}
+
+.btn-circle.btn-sm {
+  width: var(--button-height-sm);
+  height: var(--button-height-sm);
+}
+
+.btn-circle.btn-lg {
+  width: var(--button-height-lg);
+  height: var(--button-height-lg);
+}
+
+/* ===== BUTTON STATES ===== */
+.btn-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.btn-loading.btn-primary::after {
+  border-top-color: var(--cosmic-void);
+}
+
+.btn-loading.btn-secondary::after,
+.btn-loading.btn-ghost::after,
+.btn-loading.btn-outline::after {
+  border-top-color: var(--royalust-gold);
+}
+
+/* ===== BUTTON GROUPS ===== */
+.btn-group {
+  display: inline-flex;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-group .btn-base {
+  border-radius: 0;
+  border-right: 1px solid var(--glass-border-light);
+  margin: 0;
+}
+
+.btn-group .btn-base:first-child {
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+.btn-group .btn-base:last-child {
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  border-right: none;
+}
+
+.btn-group .btn-base:only-child {
+  border-radius: var(--radius-lg);
+  border-right: none;
+}
+
+/* Vertical button group */
+.btn-group-vertical {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-group-vertical .btn-base {
+  border-radius: 0;
+  border-bottom: 1px solid var(--glass-border-light);
+  margin: 0;
+  width: 100%;
+}
+
+.btn-group-vertical .btn-base:first-child {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.btn-group-vertical .btn-base:last-child {
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  border-bottom: none;
+}
+
+/* ===== ICON BUTTONS ===== */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.btn-icon-only {
+  width: var(--button-height);
+  height: var(--button-height);
+  padding: 0;
+}
+
+.btn-icon-only.btn-sm {
+  width: var(--button-height-sm);
+  height: var(--button-height-sm);
+}
+
+.btn-icon-only.btn-lg {
+  width: var(--button-height-lg);
+  height: var(--button-height-lg);
+}
+
+.btn-icon-left .icon {
+  margin-right: var(--space-1);
+}
+
+.btn-icon-right .icon {
+  margin-left: var(--space-1);
+}
+
+/* ===== FLOATING ACTION BUTTON ===== */
+.btn-fab {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--royalust-gold) 0%, var(--bronze-light) 100%);
+  color: var(--cosmic-void);
+  box-shadow: var(--shadow-xl), var(--glow-gold);
+  z-index: var(--z-50);
+  transition: all var(--transition-base) var(--ease-out);
+}
+
+.btn-fab:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-2xl), var(--glow-gold-strong);
+}
+
+.btn-fab:active {
+  transform: scale(1.05);
+}
+
+/* ===== TOGGLE BUTTONS ===== */
+.btn-toggle {
+  background: var(--glass-white-light);
+  color: var(--text-muted);
+  border: 1px solid var(--glass-border-light);
+}
+
+.btn-toggle.active {
+  background: linear-gradient(135deg, var(--royalust-gold) 0%, var(--bronze-light) 100%);
+  color: var(--cosmic-void);
+  box-shadow: var(--glow-gold-subtle);
+}
+
+.btn-toggle:hover:not(.active) {
+  background: var(--glass-gold-light);
+  color: var(--royalust-gold);
+}
+
+/* ===== SPLIT BUTTONS ===== */
+.btn-split {
+  display: inline-flex;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.btn-split-main {
+  border-radius: 0;
+  border-right: 1px solid var(--glass-border-light);
+}
+
+.btn-split-dropdown {
+  width: 40px;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== RESPONSIVE BUTTON BEHAVIOR ===== */
+@media (max-width: 640px) {
+  .btn-responsive {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-group .btn-base {
+    border-radius: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border-light);
+  }
+  
+  .btn-group .btn-base:first-child {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  
+  .btn-group .btn-base:last-child {
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    border-bottom: none;
+  }
+  
+  .btn-fab {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-base {
+    font-size: var(--font-size-sm);
+    padding: var(--space-2) var(--space-4);
+  }
+  
+  .btn-lg {
+    font-size: var(--font-size-base);
+    height: var(--button-height);
+  }
+  
+  .btn-xl {
+    font-size: var(--font-size-lg);
+    height: var(--button-height-lg);
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+  .btn-base,
+  .btn-fab {
+    transition: none;
+  }
+  
+  .btn-base::before {
+    display: none;
+  }
+  
+  .btn-loading::after {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .btn-base {
+    border: 2px solid currentColor;
+  }
+  
+  .btn-primary {
+    background: var(--royalust-gold);
+    color: var(--cosmic-void);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .btn-base,
+  .btn-fab {
+    display: none !important;
+  }
+  
+  .btn-group,
+  .btn-group-vertical {
+    display: none !important;
+  }
+}

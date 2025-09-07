@@ -1,0 +1,119 @@
+/* ===================================================================
+   ANIMATIONS MODULE - MAIN ORCHESTRATOR
+   Comprehensive modular animation system for Royalust Compliance Dashboard
+   =================================================================== */
+
+/* Import all modular animation files */
+@import url('./entrance-animations.css');
+@import url('./hover-effects.css');
+@import url('./loading-animations.css');
+@import url('./transition-effects.css');
+@import url('./gold-effects.css');
+@import url('./micro-interactions.css');
+@import url('./scroll-animations.css');
+@import url('./mobile-animations.css');
+@import url('./performance-animations.css');
+
+/* Base Animation Variables */
+:root {
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.3s;
+  --animation-duration-slow: 0.6s;
+  --animation-easing-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --animation-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --animation-easing-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animation Control Classes */
+.animations-enabled {
+  /* Default state - all animations active */
+}
+
+.animations-reduced {
+  /* Reduced motion preference respected */
+}
+
+.animations-disabled * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.animations-performance-mode * {
+  animation-duration: 0.1s !important;
+  transition-duration: 0.1s !important;
+}
+
+/* Global Animation Utilities */
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+
+.animate-duration-fast { animation-duration: var(--animation-duration-fast); }
+.animate-duration-normal { animation-duration: var(--animation-duration-normal); }
+.animate-duration-slow { animation-duration: var(--animation-duration-slow); }
+
+.animate-ease-smooth { animation-timing-function: var(--animation-easing-smooth); }
+.animate-ease-bounce { animation-timing-function: var(--animation-easing-bounce); }
+.animate-ease-elastic { animation-timing-function: var(--animation-easing-elastic); }
+
+/* Component-Specific Animation Orchestration */
+.royalust-header {
+  /* Combine entrance + gold effects */
+}
+
+.compliance-card {
+  /* Combine hover + transition + scroll effects */
+}
+
+.progress-indicator {
+  /* Combine gold + performance + loading effects */
+}
+
+.mobile-interface {
+  /* Combine mobile + micro-interaction effects */
+}
+
+/* Animation Performance Monitoring */
+.perf-critical-path {
+  /* Highest priority animations */
+  will-change: transform, opacity;
+}
+
+.perf-secondary {
+  /* Lower priority animations */
+  will-change: auto;
+}
+
+/* Accessibility and Performance Overrides */
+@media (prefers-reduced-motion: reduce) {
+  /* All modular files handle this individually */
+  .animate-delay-1,
+  .animate-delay-2,
+  .animate-delay-3,
+  .animate-delay-4,
+  .animate-delay-5 {
+    animation-delay: 0s;
+  }
+}
+
+@media (max-width: 480px) and (max-device-pixel-ratio: 1.5) {
+  /* Low-end device optimizations */
+  .animate-duration-slow {
+    animation-duration: var(--animation-duration-normal);
+  }
+  
+  .animate-duration-normal {
+    animation-duration: var(--animation-duration-fast);
+  }
+}
+
+/* High refresh rate optimizations */
+@media (min-resolution: 120dpi) {
+  .animate-ease-smooth,
+  .animate-ease-bounce,
+  .animate-ease-elastic {
+    animation-timing-function: linear;
+  }
+}

@@ -1,0 +1,523 @@
+/* ===================================================================
+   TRANSITION EFFECTS MODULE
+   Smooth state changes and component transitions
+   =================================================================== */
+
+/* Base Transition Classes */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-bounce {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.transition-elastic {
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.transition-fast {
+  transition: all 0.15s ease-out;
+}
+
+.transition-slow {
+  transition: all 0.8s ease-in-out;
+}
+
+/* Page Transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-30px) scale(1.05);
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* Modal Transitions */
+.modal-backdrop-enter {
+  opacity: 0;
+  backdrop-filter: blur(0px);
+}
+
+.modal-backdrop-enter-active {
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-out;
+}
+
+.modal-backdrop-exit {
+  opacity: 1;
+  backdrop-filter: blur(10px);
+}
+
+.modal-backdrop-exit-active {
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: all 0.3s ease-in;
+}
+
+.modal-content-enter {
+  opacity: 0;
+  transform: scale(0.8) translateY(50px);
+}
+
+.modal-content-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modal-content-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.modal-content-exit-active {
+  opacity: 0;
+  transform: scale(0.9) translateY(-30px);
+  transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* Card Expand/Collapse Transitions */
+.card-expand-enter {
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.card-expand-enter-active {
+  max-height: 1000px;
+  opacity: 1;
+  transform: scaleY(1);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-expand-exit {
+  max-height: 1000px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.card-expand-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* Slide Transitions */
+.slide-left-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-left-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-left-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-left-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.slide-right-enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-right-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-right-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-right-exit-active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* Fade Transitions */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Scale Transitions */
+.scale-enter {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.scale-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scale-exit-active {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* Flip Transitions */
+.flip-enter {
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transform-style: preserve-3d;
+}
+
+.flip-enter-active {
+  opacity: 1;
+  transform: rotateY(0deg);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.flip-exit {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.flip-exit-active {
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: all 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* Progress Transitions */
+.progress-update {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.progress-bar-fill {
+  transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.progress-ring-stroke {
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.progress-percentage {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* State Change Transitions */
+.state-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-color: var(--success-green);
+  color: var(--success-green);
+  transition: all 0.4s ease-out;
+}
+
+.state-warning {
+  background-color: rgba(255, 152, 0, 0.1);
+  border-color: var(--warning-amber);
+  color: var(--warning-amber);
+  transition: all 0.4s ease-out;
+}
+
+.state-error {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-color: var(--error-red);
+  color: var(--error-red);
+  transition: all 0.4s ease-out;
+}
+
+.state-info {
+  background-color: rgba(33, 150, 243, 0.1);
+  border-color: var(--info-blue);
+  color: var(--info-blue);
+  transition: all 0.4s ease-out;
+}
+
+/* Theme Transitions */
+.theme-transition {
+  transition: 
+    background-color 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Accordion Transitions */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.accordion-content.collapsed {
+  max-height: 0;
+}
+
+.accordion-content.expanded {
+  max-height: 2000px;
+}
+
+.accordion-header {
+  transition: all 0.3s ease;
+}
+
+.accordion-header.active {
+  background: linear-gradient(
+    135deg,
+    rgba(106, 27, 154, 0.1) 0%,
+    rgba(212, 175, 55, 0.05) 100%
+  );
+}
+
+.accordion-icon {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Tab Transitions */
+.tab-content-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.tab-content-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tab-content-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tab-content-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.tab-indicator {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Tooltip Transitions */
+.tooltip-enter {
+  opacity: 0;
+  transform: translateY(10px) scale(0.8);
+}
+
+.tooltip-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tooltip-exit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.tooltip-exit-active {
+  opacity: 0;
+  transform: translateY(10px) scale(0.8);
+  transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* Notification Transitions */
+.notification-enter {
+  opacity: 0;
+  transform: translateX(100%) scale(0.8);
+}
+
+.notification-enter-active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.notification-exit {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.notification-exit-active {
+  opacity: 0;
+  transform: translateX(100%) scale(0.8);
+  transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* Loading State Transitions */
+.loading-enter {
+  opacity: 0;
+}
+
+.loading-enter-active {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.loading-exit {
+  opacity: 1;
+}
+
+.loading-exit-active {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+/* Content Reveal Transitions */
+.reveal-up {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-up.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.reveal-left {
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-left.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reveal-scale {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-scale.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Stagger Transitions */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.stagger-item:nth-child(4) { transition-delay: 0.4s; }
+.stagger-item:nth-child(5) { transition-delay: 0.5s; }
+.stagger-item:nth-child(6) { transition-delay: 0.6s; }
+.stagger-item:nth-child(7) { transition-delay: 0.7s; }
+.stagger-item:nth-child(8) { transition-delay: 0.8s; }
+.stagger-item:nth-child(9) { transition-delay: 0.9s; }
+
+.stagger-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .transition-smooth,
+  .transition-bounce,
+  .transition-elastic,
+  .transition-fast,
+  .transition-slow,
+  .page-transition-enter-active,
+  .page-transition-exit-active,
+  .modal-backdrop-enter-active,
+  .modal-backdrop-exit-active,
+  .modal-content-enter-active,
+  .modal-content-exit-active,
+  .card-expand-enter-active,
+  .card-expand-exit-active,
+  .slide-left-enter-active,
+  .slide-left-exit-active,
+  .slide-right-enter-active,
+  .slide-right-exit-active,
+  .fade-enter-active,
+  .fade-exit-active,
+  .scale-enter-active,
+  .scale-exit-active,
+  .flip-enter-active,
+  .flip-exit-active,
+  .progress-update,
+  .progress-bar-fill,
+  .progress-ring-stroke,
+  .progress-percentage,
+  .state-success,
+  .state-warning,
+  .state-error,
+  .state-info,
+  .theme-transition,
+  .accordion-content,
+  .accordion-header,
+  .accordion-icon,
+  .tab-content-enter-active,
+  .tab-content-exit-active,
+  .tab-indicator,
+  .tooltip-enter-active,
+  .tooltip-exit-active,
+  .notification-enter-active,
+  .notification-exit-active,
+  .loading-enter-active,
+  .loading-exit-active,
+  .reveal-up,
+  .reveal-left,
+  .reveal-scale,
+  .stagger-item {
+    transition: none;
+  }
+}

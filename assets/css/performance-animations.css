@@ -1,0 +1,499 @@
+/* ===================================================================
+   PERFORMANCE ANIMATIONS MODULE
+   GPU-accelerated effects and optimized animations
+   =================================================================== */
+
+/* GPU Acceleration Base Classes */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+.gpu-transform {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.gpu-opacity {
+  will-change: opacity;
+}
+
+.gpu-filter {
+  will-change: filter;
+}
+
+/* Optimized Transform Animations */
+.perf-slide-up {
+  transform: translate3d(0, 30px, 0);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.4s ease;
+}
+
+.perf-slide-up.active {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.perf-slide-left {
+  transform: translate3d(-30px, 0, 0);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.4s ease;
+}
+
+.perf-slide-left.active {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.perf-scale {
+  transform: translate3d(0, 0, 0) scale(0.8);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.4s ease;
+}
+
+.perf-scale.active {
+  transform: translate3d(0, 0, 0) scale(1);
+  opacity: 1;
+}
+
+/* Hardware-Accelerated Rotations */
+.perf-rotate {
+  transform: translate3d(0, 0, 0) rotateY(-90deg);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.6s ease;
+}
+
+.perf-rotate.active {
+  transform: translate3d(0, 0, 0) rotateY(0deg);
+  opacity: 1;
+}
+
+/* Optimized Progress Animations */
+.perf-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.perf-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--royalust-gold), var(--ethereal-purple));
+  border-radius: 3px;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.perf-progress-fill.filled {
+  transform: translate3d(0, 0, 0);
+}
+
+/* GPU-Optimized Shimmer Effects */
+.perf-shimmer {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.perf-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.3) 50%,
+    transparent 100%
+  );
+  transform: translate3d(-100%, 0, 0);
+  animation: perfShimmerSlide 2s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes perfShimmerSlide {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+/* Optimized Glow Effects */
+.perf-glow {
+  position: relative;
+  transform: translateZ(0);
+}
+
+.perf-glow::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--royalust-gold),
+    var(--ethereal-purple),
+    var(--royalust-gold)
+  );
+  border-radius: inherit;
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  will-change: opacity;
+}
+
+.perf-glow:hover::after {
+  opacity: 0.7;
+}
+
+/* Hardware-Accelerated Spinner */
+.perf-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(212, 175, 55, 0.2);
+  border-top: 4px solid var(--royalust-gold);
+  border-radius: 50%;
+  animation: perfSpinnerRotate 1s linear infinite;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+@keyframes perfSpinnerRotate {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(360deg);
+  }
+}
+
+/* Optimized Card Flip */
+.perf-card-flip {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.perf-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.perf-card-flip.flipped .perf-card-inner {
+  transform: rotateY(180deg);
+}
+
+.perf-card-front,
+.perf-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.perf-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Optimized Parallax */
+.perf-parallax {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.perf-parallax-slow {
+  transform: translate3d(0, calc(var(--scroll-y, 0) * 0.1px), 0);
+}
+
+.perf-parallax-medium {
+  transform: translate3d(0, calc(var(--scroll-y, 0) * 0.3px), 0);
+}
+
+.perf-parallax-fast {
+  transform: translate3d(0, calc(var(--scroll-y, 0) * 0.5px), 0);
+}
+
+/* GPU-Accelerated Hover Effects */
+.perf-hover {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.perf-hover:hover {
+  transform: translate3d(0, -4px, 0) scale(1.02);
+}
+
+/* Optimized Modal Animations */
+.perf-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 26, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+.perf-modal-backdrop.visible {
+  opacity: 1;
+}
+
+.perf-modal-content {
+  transform: translate3d(-50%, -50%, 0) scale(0.8);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.4s ease;
+  will-change: transform, opacity;
+}
+
+.perf-modal-content.visible {
+  transform: translate3d(-50%, -50%, 0) scale(1);
+  opacity: 1;
+}
+
+/* Optimized Loading States */
+.perf-skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: perfSkeletonShimmer 1.5s ease-in-out infinite;
+  transform: translateZ(0);
+  will-change: background-position;
+}
+
+@keyframes perfSkeletonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Hardware-Accelerated Pulse */
+.perf-pulse {
+  animation: perfPulseScale 2s ease-in-out infinite;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+@keyframes perfPulseScale {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) scale(1.05);
+  }
+}
+
+/* Optimized Stagger Animations */
+.perf-stagger-container .perf-stagger-item {
+  transform: translate3d(0, 30px, 0);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.4s ease;
+  will-change: transform, opacity;
+}
+
+.perf-stagger-container.active .perf-stagger-item {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.perf-stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.perf-stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.perf-stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.perf-stagger-item:nth-child(4) { transition-delay: 0.4s; }
+.perf-stagger-item:nth-child(5) { transition-delay: 0.5s; }
+
+/* GPU-Optimized Morphing */
+.perf-morph {
+  border-radius: 8px;
+  transition: border-radius 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translate3d(0, 0, 0);
+  will-change: border-radius, transform;
+}
+
+.perf-morph.morphed {
+  border-radius: 50%;
+  transform: translate3d(0, 0, 0) rotate(180deg);
+}
+
+/* Optimized Text Animations */
+.perf-text-reveal {
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.perf-text-reveal .text-line {
+  display: block;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.perf-text-reveal.revealed .text-line {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Hardware-Accelerated Floating */
+.perf-float {
+  animation: perfFloatMotion 4s ease-in-out infinite;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+@keyframes perfFloatMotion {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+/* Optimized Ripple Effect */
+.perf-ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.perf-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.3) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 0.6s ease, height 0.6s ease;
+  will-change: width, height;
+  pointer-events: none;
+}
+
+.perf-ripple:active::after {
+  width: 300%;
+  height: 300%;
+}
+
+/* Performance Monitoring Classes */
+.perf-monitor {
+  /* Used for performance tracking - no visual styles */
+}
+
+.perf-critical {
+  /* Critical path animations - highest priority */
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+.perf-deferred {
+  /* Non-critical animations - can be delayed */
+  animation-delay: 0.1s;
+}
+
+/* Reduced Motion Overrides */
+@media (prefers-reduced-motion: reduce) {
+  .gpu-accelerated,
+  .gpu-transform,
+  .perf-slide-up,
+  .perf-slide-left,
+  .perf-scale,
+  .perf-rotate,
+  .perf-progress-fill,
+  .perf-shimmer::before,
+  .perf-glow::after,
+  .perf-spinner,
+  .perf-card-inner,
+  .perf-parallax,
+  .perf-parallax-slow,
+  .perf-parallax-medium,
+  .perf-parallax-fast,
+  .perf-hover,
+  .perf-modal-backdrop,
+  .perf-modal-content,
+  .perf-skeleton,
+  .perf-pulse,
+  .perf-stagger-item,
+  .perf-morph,
+  .perf-text-reveal .text-line,
+  .perf-float,
+  .perf-ripple::after {
+    animation: none;
+    transition: none;
+    transform: none;
+    will-change: auto;
+  }
+}
+
+/* Low-End Device Optimizations */
+@media (max-width: 480px) and (max-device-pixel-ratio: 1.5) {
+  .perf-shimmer::before,
+  .perf-glow::after,
+  .perf-skeleton,
+  .perf-pulse,
+  .perf-float {
+    animation-duration: 0.5s;
+  }
+  
+  .perf-slide-up,
+  .perf-slide-left,
+  .perf-scale,
+  .perf-rotate,
+  .perf-progress-fill,
+  .perf-hover,
+  .perf-modal-content,
+  .perf-stagger-item,
+  .perf-morph,
+  .perf-text-reveal .text-line {
+    transition-duration: 0.2s;
+  }
+}
+
+/* High Refresh Rate Optimizations */
+@media (min-resolution: 120dpi) {
+  .perf-spinner,
+  .perf-shimmer::before,
+  .perf-skeleton,
+  .perf-pulse,
+  .perf-float {
+    animation-timing-function: linear;
+  }
+}
