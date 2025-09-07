@@ -2,6 +2,20 @@
 
 Interactive compliance dashboard for Royalust's Big Island retreat operations, designed to track regulatory compliance across 9 key categories while permit applications are pending.
 
+## 🎯 Project Overview
+
+This web application serves as a comprehensive compliance tracking system for investors to monitor Royalust's adherence to all regulatory requirements for building day-use facilities. The dashboard provides real-time progress tracking, risk assessment, and direct links to source documentation across 9 critical compliance categories.
+
+### Key Features
+
+- **Interactive Dashboard**: Real-time progress tracking with visual indicators
+- **9 Compliance Categories**: Complete coverage of regulatory requirements
+- **Source Documentation**: Direct links to official regulations and codes
+- **Risk Assessment**: Automated risk level calculations based on completion status
+- **Export Functionality**: Generate PDF reports and shareable summaries
+- **Mobile Responsive**: Optimized for all devices and screen sizes
+- **Dark Theme**: Professional aesthetic matching Royalust brand guidelines
+
 ## Modular Architecture Principles
 
 This project follows a **highly modular architecture** with the following core principles:
@@ -51,34 +65,125 @@ royalust-compliance-checklist/
 - **Animation Modules**: `entrance-animations.css`, `hover-effects.css`
 - **Data Modules**: `compliance.json`, `data-manager.js`, `validation.js`
 
-## Getting Started
+## 🚀 Getting Started
+
+### Prerequisites
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Git for version control
+- Node.js (for development dependencies)
+
+### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/batelzeek36/royalust-compliance-checklist.git
    cd royalust-compliance-checklist
    ```
 
-2. **Install dependencies**
+2. **Install dependencies** (optional for development)
    ```bash
    npm install
    ```
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
+3. **Open the application**
+   - For local development: Open `index.html` in your browser
+   - For live version: Visit the deployed site on Vercel
 
-4. **Open in browser**
-   Navigate to `http://localhost:3000`
+### Branch Structure
 
-## Deployment
+- **`master`**: Stable production code
+- **`production`**: Production deployment branch
+- **`development`**: Active development branch for new features
 
-This project is configured for deployment on Vercel:
+### Development Workflow
 
+1. Create feature branches from `development`
+2. Make changes following modular architecture principles
+3. Test thoroughly across devices and browsers
+4. Submit pull request to `development` branch
+5. Deploy to production via `production` branch
+
+## 🌐 Deployment
+
+This project is configured for deployment on Vercel with automatic deployments from GitHub:
+
+### Live Site
+- **Production**: [Coming Soon - Vercel URL]
+- **Development**: [Coming Soon - Preview URL]
+
+### Deployment Process
+1. Push changes to `production` branch
+2. Vercel automatically builds and deploys
+3. Verify functionality on live site
+4. Monitor performance and error logs
+
+### Manual Deployment
 ```bash
-npm run deploy
+# Using Vercel CLI
+vercel --prod
+
+# Or deploy specific branch
+vercel --prod --branch production
 ```
+
+## 📊 Compliance Categories
+
+The dashboard tracks compliance across these 9 critical categories:
+
+1. **Safe Operating Mode** - Current low-risk operations framework
+2. **Structures & Building** - Physical infrastructure compliance
+3. **Health & Sanitation** - Safety and health requirements
+4. **Privacy Controls** - Guest privacy and security measures
+5. **Neighbor Relations** - Community engagement and relations
+6. **Compliance Documentation** - Required permits and documentation
+7. **Taxes & Filings** - Tax compliance and government filings
+8. **Risk Management** - Insurance and liability coverage
+9. **Investor Reassurance** - Transparency and communication measures
+
+## 🛠️ Technology Stack
+
+- **Frontend**: Vanilla JavaScript (ES6+), HTML5, CSS3
+- **Styling**: Modular CSS with custom properties and animations
+- **Data**: JSON-based data structure with localStorage persistence
+- **Fonts**: Google Fonts (Cinzel, Cormorant Garamond, Inter)
+- **Deployment**: Vercel with GitHub integration
+- **Version Control**: Git with GitHub
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Deep navy and cosmic void backgrounds
+- **Accent**: Royalust gold and bronze typography
+- **Interactive**: Violet highlights for user interactions
+- **Status**: Green (complete), amber (in-progress), red (incomplete)
+
+### Typography
+- **Headings**: Cinzel (elegant serif for branding)
+- **Subheadings**: Cormorant Garamond (italic serif for taglines)
+- **Body Text**: Inter (clean sans-serif for readability)
+
+## 📱 Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch from `development`
+3. Follow modular architecture principles (300-400 lines max per module)
+4. Test across supported browsers
+5. Submit a pull request with detailed description
+
+## 📄 Requirements
+
+This project fulfills the following requirements:
+- **5.1**: Git repository with proper version control
+- **5.2**: GitHub integration for collaboration
+- **5.3**: Branch structure for development and production workflows
 
 ## Architecture Philosophy
 
@@ -90,6 +195,13 @@ This philosophy ensures:
 - **Flexible architecture** that can grow without becoming unwieldy
 - **Developer productivity** through clear separation of concerns
 
-## License
+## 📞 Support
+
+For questions or issues:
+- Create an issue on GitHub
+- Contact the development team
+- Review the project documentation in `.kiro/specs/`
+
+## 📜 License
 
 MIT License - See LICENSE file for details
