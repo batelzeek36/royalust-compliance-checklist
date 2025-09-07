@@ -1,0 +1,39 @@
+{
+  "name": "royalust-compliance-checklist",
+  "version": "1.0.0",
+  "description": "Interactive compliance checklist dashboard for Royalust's Big Island retreat operations",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Build process for modular architecture'",
+    "test": "echo 'Test suite for modular components'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "compliance",
+    "dashboard",
+    "royalust",
+    "checklist",
+    "modular",
+    "interactive"
+  ],
+  "author": "Royalust Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/royalust/compliance-checklist.git"
+  },
+  "homepage": "https://royalust-compliance.vercel.app",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

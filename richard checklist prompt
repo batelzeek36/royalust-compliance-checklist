@@ -1,0 +1,14 @@
+please take ALL of the info from Info.txt and turn it into a comprehensive and dazzling and interactive checklist website that allows our investor to see that we are SAFE by building day-use facilities on our property for our business Royalust and as long as we follow this checklist, we are safe to proceed while we also submit for the permit and wait. Make the theme be a dark theme with violet highlights with subtle animations. Make it responsive and optimized for mobile and desktop. 
+
+PHOTO FOR FONT AND COLOR REFERENCE: C:\Users\volca\Documents\Royalust\Richard Checklist 2\photo_2025-09-06_15-11-33.jpg
+
+make sure to also include links to sources of information and claims so that the investor can double check and be sure that its accurate
+
+Make sure all files remain modular for easy editing (around 300 - 400 lines) SET UP A MODULAR STRUCTURE. 
+
+please refer to mythic-compliance-dashboard.html for the design of the site
+
+Also please set up this project wit Git and Github so that we can create separate branches for each revision of the site. 
+
+This stie will deploy to Vercel via Vercel CLI. Please set up the CLI and deploy the site to Vercel.
+
